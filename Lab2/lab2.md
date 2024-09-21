@@ -21,7 +21,7 @@ Force the program to execute `myfunc()` with the correct values for `p (0x040812
 3. Let have a brief analysis of `myfunc()` <br>
    ![ctf-detail](../img/ctf/stack-frame-detail.png) 
    <br> From here we can see that `p` and `q` is not exist in the stack frame. So the idea here is to determine exactly the location of `p` and `q` to assign directly the value of them before executing the program.
-4. When a function like `vuln()` is executed, it modifies the stack structure, so we need to determine the location of `ebp` after the execution of `vuln()`.
+4. When a function like `vuln()` is executed, it modifies the stack structure, so we need to determine the location of `ebp` after the execution of `vuln()`. <br>
     ![ctf-vuln-detail](../img/ctf/vuln-detail.png)
     > Explaination:
     > <br>- Before `vuln()` is called, `esp` is set at the top of the stack frame for the calling function, the initial `ebp` is pushed onto the stack when `vuln()` starts
