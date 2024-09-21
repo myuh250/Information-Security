@@ -78,7 +78,7 @@ Overflow `buf` and overwrite the function pointer `func` to point to the `shell(
     ```
     gdb bof3.o
     ```
-3. Func is a pointer which is pointing to `sup()` address. So to override and change this pointer to `shell()` address we have to find the address of shell function
+3. Func is a pointer which is pointing to `sup()` address. So to override and change this pointer to `shell()` address we have to find the address of shell function <br>
     ![bof3-shell](../img/bof3/shell.png)
 4. The attack 
     ```
